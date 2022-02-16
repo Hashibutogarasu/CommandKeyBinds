@@ -1,9 +1,14 @@
-# Fabric Example Mod
+# Command KeyBinds
 
-## Setup
+Build:
+```
+./gradlew build
+```
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+runClient
+```
+./gradlew runClient
+```
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+ネザーポータルから出てその出た先がプラグインなどで土地保護されてる上にチャットが開けずに閉じ込められて詰んだときに使えるModです
+ModmenuのこのModの設定画面からコマンドを設定し、設定したキーを押すことでクライアント側からコマンドを送信します。
