@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "commandkeybinds",
+  "version": "${version}",
+  "name": "Command Keybinds",
+  "description": "If you pressed your setterd keybind,you could execute commands from client",
+  "authors": [
+    "Hashibutogarasu"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/commandkeybinds/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.Hashibutogarasu.commandkeybind.CommandKeyBindModClient"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
