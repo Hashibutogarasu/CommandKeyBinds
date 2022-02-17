@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "commandkeybinds",
+  "id": "commandkeybind",
   "version": "${version}",
-  "name": "Command Keybinds",
-  "description": "If you pressed your setterd keybind,you could execute commands from client",
+  "name": "Command Keybind",
+  "description": "If you pressed your setted keybind,you could execute commands from client",
   "authors": [
     "Hashibutogarasu"
   ],
@@ -17,6 +17,9 @@
   "entrypoints": {
     "client": [
       "com.Hashibutogarasu.commandkeybind.CommandKeyBindModClient"
+    ],
+    "modmenu": [
+      "com.Hashibutogarasu.commandkeybind.ModmenuIntegration"
     ]
   },
   "mixins": [
