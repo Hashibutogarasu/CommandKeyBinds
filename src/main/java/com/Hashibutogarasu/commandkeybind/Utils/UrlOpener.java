@@ -1,4 +1,4 @@
-package com.Hashibutogarasu.commandkeybind;
+package com.Hashibutogarasu.commandkeybind.Utils;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
