@@ -1,0 +1,10 @@
+{
+  "gui.commandkeybind.title" : "Command Keybind",
+  "category.commandkeybind.general" : "Command Keybind",
+  "option.commandkeybind.command" : "実行するコマンドの値",
+  "category.commandkeybind.keybinds" : "Command Keybind",
+  "key.commandkeybind.executecommand" : "コマンドの実行",
+  "option.commandkeybind.shotochat" : "コマンドの実行ログを表示する",
+  "commandkeybind.systemmessage.issueerror" : "§b【CommandKeyBind】§r§4【エラー】§rコマンドを実行できませんでした。 : %s",
+  "commandkeybind.systemmessage.success" : "§b【CommandKeyBind】§r§b【成功】§rコマンドを実行しました。 : %s"
+}

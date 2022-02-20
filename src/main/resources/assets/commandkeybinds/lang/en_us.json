@@ -1,0 +1,10 @@
+{
+  "gui.commandkeybind.title" : "Command Keybind",
+  "category.commandkeybind.general" : "Command Keybind",
+  "option.commandkeybind.command" : "Command Value",
+  "category.commandkeybind.keybinds" : "Command Keybind",
+  "key.commandkeybind.executecommand" : "Executte Command",
+  "option.commandkeybind.shotochat" : "Show command logs to chat",
+  "commandkeybind.systemmessage.issueerror" : "§b【CommandKeyBind】§r§4【Error】§rCould not issue the command : %s",
+  "commandkeybind.systemmessage.success" : "§b【CommandKeyBind】§r§b【Success】§rIssued the command : %s"
+}
