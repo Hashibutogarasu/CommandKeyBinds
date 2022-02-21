@@ -19,8 +19,10 @@ import java.util.UUID;
 public class CommandKeyBindModClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("commandkeybind");
     public static String MOD_ID = "commandkeybind";
+
     @Override
     public void onInitializeClient() {
+
         KeyBinding executecommandkeybind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.commandkeybind.executecommand", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
