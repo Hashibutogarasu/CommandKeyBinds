@@ -29,6 +29,7 @@ public class CommandKeyBindModClient implements ClientModInitializer {
                 "category.commandkeybind.keybinds" // The translation key of the keybinding's category.
         ));
 
+
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (executecommandkeybind.wasPressed()) {
                 String executecommand = CommandKeyBindsConfigScreenFactory.commandconfig.configcommandvalue;
