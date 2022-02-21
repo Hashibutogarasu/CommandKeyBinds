@@ -33,7 +33,6 @@ public class CommandKeyBindModClient implements ClientModInitializer {
             while (executecommandkeybind.wasPressed()) {
                 String executecommand = CommandKeyBindsConfigScreenFactory.commandconfig.configcommandvalue;
                 try {
-
                     boolean showchat = CommandKeyBindsConfigScreenFactory.commandconfig.showtochat;
 
                     if (!(executecommand.isEmpty() || executecommand.isBlank() || executecommand.equals("/"))) {
