@@ -39,7 +39,7 @@ public class CommandKeyBindModClient implements ClientModInitializer {
                     if (!(executecommand.isEmpty() || executecommand.isBlank() || executecommand.equals("/"))) {
                         assert client.player != null;
                         client.player.sendChatMessage(executecommand);
-                        if (!showchat) {
+                        if (showchat) {
                             if (executecommand.length() >= 10) {
                                 client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.success", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
                             } else {
@@ -48,7 +48,7 @@ public class CommandKeyBindModClient implements ClientModInitializer {
                         }
                     } else {
                         assert client.player != null;
-                        if (!showchat) {
+                        if (showchat) {
                             if (executecommand.length() >= 10) {
                                 client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.issueerror", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
                             } else {

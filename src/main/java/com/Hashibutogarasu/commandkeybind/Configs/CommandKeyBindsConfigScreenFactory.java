@@ -24,7 +24,7 @@ public class CommandKeyBindsConfigScreenFactory{
             currentValue = new AtomicReference<>(commandconfig.configcommandvalue);
             ShowtoChat = new AtomicReference<>(commandconfig.showtochat);
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -38,7 +38,7 @@ public class CommandKeyBindsConfigScreenFactory{
                 commandconfig.showtochat = ShowtoChat.get();
                 commandconfig.save();
             }
-            catch(Exception e){
+            catch(Exception ignored){
 
             }
         });
