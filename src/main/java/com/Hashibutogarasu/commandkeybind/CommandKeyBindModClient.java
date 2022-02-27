@@ -32,34 +32,35 @@ public class CommandKeyBindModClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (executecommandkeybind.wasPressed()) {
-                String executecommand = CommandKeyBindsConfigScreenFactory.commandconfig.configcommandvalue;
                 try {
-                    boolean showchat = CommandKeyBindsConfigScreenFactory.commandconfig.showtochat;
+                    String executecommand = CommandKeyBindsConfigScreenFactory.commandconfig.configcommandvalue;
+                    if(CommandKeyBindsConfigScreenFactory.commandconfig.configcommandvalue != null) {
 
-                    if (!(executecommand.isEmpty() || executecommand.isBlank() || executecommand.equals("/"))) {
-                        assert client.player != null;
-                        client.player.sendChatMessage(executecommand);
-                        if (showchat) {
-                            if (executecommand.length() >= 10) {
-                                client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.success", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
-                            } else {
-                                client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.success", executecommand), UUID.randomUUID());
+                        boolean showchat = CommandKeyBindsConfigScreenFactory.commandconfig.showtochat;
+
+                        if (!(executecommand.isEmpty() || executecommand.isBlank() || executecommand.equals("/"))) {
+                            assert client.player != null;
+                            client.player.sendChatMessage(executecommand);
+                            if (showchat) {
+                                if (executecommand.length() >= 10) {
+                                    client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.success", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
+                                } else {
+                                    client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.success", executecommand), UUID.randomUUID());
+                                }
                             }
-                        }
-                    } else {
-                        assert client.player != null;
-                        if (showchat) {
-                            if (executecommand.length() >= 10) {
-                                client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.issueerror", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
-                            } else {
-                                client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.issueerror", executecommand), UUID.randomUUID());
+                        } else {
+                            assert client.player != null;
+                            if (showchat) {
+                                if (executecommand.length() >= 10) {
+                                    client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.issueerror", executecommand.substring(0, 10) + "..."), UUID.randomUUID());
+                                } else {
+                                    client.player.sendSystemMessage(new TranslatableText("commandkeybind.systemmessage.issueerror", executecommand), UUID.randomUUID());
+                                }
                             }
                         }
                     }
                 }
-                catch (Exception ignored){
-
-                }
+                catch (Exception ignored){ }
             }
         });
     }
