@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.11-SNAPSHOT'
+	id 'fabric-loom' version "0.11-SNAPSHOT"
 	id 'maven-publish'
 }
 
@@ -36,15 +36,15 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.57") {
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
 	// Mod Menu, to add the hook for a config screen
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
-	implementation 'com.moandjiezana.toml:toml4j:0.7.2'
-	include 'com.moandjiezana.toml:toml4j:0.7.2'
+	implementation "com.moandjiezana.toml:toml4j:${project.toml4j_version}"
+	include "com.moandjiezana.toml:toml4j:${project.toml4j_version}"
 }
 
 processResources {
